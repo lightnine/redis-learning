@@ -89,5 +89,6 @@ public class RedisWithReentrantLock {
         System.out.println(lock.lock("leon"));
         System.out.println(lock.unlock("leon"));
         System.out.println(lock.unlock("leon"));
+        connection.close();
     }
 }

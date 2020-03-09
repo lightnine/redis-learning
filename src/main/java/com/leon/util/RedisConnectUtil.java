@@ -21,7 +21,7 @@ public class RedisConnectUtil {
         InputStream inputStream = RedisConnectUtil.class.getClassLoader()
 .getResourceAsStream("redis.yml");
         Map<String, Object> map = yaml.load(inputStream);
-        System.out.println(map);
+//        System.out.println(map);
         Map redis = (Map) map.get("redis");
         redisIp = (String) redis.get("ip");
         redisPort = (Integer) redis.get("port");
