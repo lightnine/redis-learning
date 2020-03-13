@@ -14,8 +14,8 @@ import java.util.Map;
  * @since 2020/3/8 14:25
  */
 public class RedisConnectUtil {
-    private static String redisIp;
-    private static Integer redisPort;
+    public static String redisIp;
+    public static Integer redisPort;
     static {
         Yaml yaml = new Yaml();
         InputStream inputStream = RedisConnectUtil.class.getClassLoader()
