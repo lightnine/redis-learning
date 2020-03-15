@@ -73,7 +73,7 @@ public class FunnelRateLimiter {
         FunnelRateLimiter funnelRateLimiter = new FunnelRateLimiter();
         for (int i = 0; i < 20; i++) {
             // 加入sleep,可以让漏斗有时间流水
-            TimeUnit.SECONDS.sleep(1);
+//            TimeUnit.SECONDS.sleep(1);
             System.out.println(funnelRateLimiter.isActionAllowed("leon", "reply", 5, 1));
         }
     }

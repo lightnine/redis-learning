@@ -47,7 +47,7 @@ public class RedisDelayingQueue<T> {
     }
     public void loop() {
         while (!Thread.interrupted()) {
-            // 获取score在[0, System.currentTimeMillis()]之间的元素, Limit限定只去第一个
+            // 获取score在[0, System.currentTimeMillis()]之间的元素, Limit限定只取第一个
             List values = commands.zrangebyscore(queueKey, Range.create(0, System.currentTimeMillis()), Limit.create(0, 1));
             if (values.isEmpty()) {
                 try {
